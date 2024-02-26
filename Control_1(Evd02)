@@ -14,9 +14,7 @@ void setup() {
   digitalWrite(D2,LOW);
   digitalWrite(D3,LOW);
   digitalWrite(D4,LOW);
-
   //
-  
   pinMode (D1,OUTPUT);
   pinMode (D2,OUTPUT);
   pinMode (D3,OUTPUT);
