@@ -4,16 +4,12 @@ void setup() {
   #define Q2 D2
   #define Q3 D3
   #define Q4 D4
-  
   //
-
   #define I1 D5
   #define I2 D6
   #define I3 D7
   #define I4 D8
-
   //
-  
   digitalWrite(D1,LOW);
   digitalWrite(D2,LOW);
   digitalWrite(D3,LOW);
@@ -25,43 +21,34 @@ void setup() {
   pinMode (D2,OUTPUT);
   pinMode (D3,OUTPUT);
   pinMode (D4,OUTPUT);
-
   //
-  
   pinMode (D5, INPUT);
   pinMode (D6, INPUT);
   pinMode (D7, INPUT);
   pinMode (D8, INPUT);
 }
-
 void loop() {
-
-
 //
 //DEFINE ENTRADAS COMO NUMERO ENTERO
   int i1=digitalRead(I1);
   int i2=digitalRead(I2);
   int i3=digitalRead(I3);
   int i4=digitalRead(I4);
-
 //
 //FUNCION DE ACTIVACION DE Q1
   if(!i1&&!i3&&i4||i2&&i4||i2&&i3||i1&&i3)digitalWrite(Q1,HIGH);
   else digitalWrite(Q1, LOW);
   delay(100);
-  
 //
 //FUNCION DE ACTIVACION DE Q2
   if(!i1&&!i3&&i4||i3&&!i4||i1&&!i4||i1&&i2&&i3)digitalWrite(Q2,HIGH);
   else digitalWrite(Q2,LOW);
   delay(100);
-
 //
 //FUNCION DE ACTIVACION DE Q3
   if(!i1&&!i2&&i3||!i1&&i2&&i4||i2&&i3&&i4||i1&&!i2&&!i4||i1&&!i3&&!i4)digitalWrite(Q3,HIGH);
   else digitalWrite(Q3,LOW);
   delay(100);
-
 //
 //FUNCION DE ACTIVACION DE Q4
   if(i3&&i4||!i1&&i2&&i3||i1&&!i2&&!i4||i1&&i2&&!i3)digitalWrite(Q4,LOW);
